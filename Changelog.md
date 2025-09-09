@@ -12,6 +12,7 @@ Bugfixes:
 
 Build System:
 * Update minimum version requirement of boost to 1.83.0 for non-windows builds.
+* Update minimum version requirements of gcc and clang to 13.3 and 18.1.3, respectively.
 
 ### 0.8.30 (2025-05-07)
 
