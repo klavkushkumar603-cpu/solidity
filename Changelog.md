@@ -7,10 +7,11 @@ Compiler Features:
 
 Bugfixes:
 * Assembler: Fix not using a fixed-width type for IDs being assigned to subassemblies nested more than one level away, resulting in inconsistent `--asm-json` output between target architectures.
+* General: Fix boost::rational comparison bug with gcc < 14 and C++20 that leads to infinite recursion.
 * Yul Optimizer: Fix edge case in which invalid Yul code is produced by ExpressionSimplifier due to expressions being substituted that contain out-of-scope variables.
 
 Build System:
-* Update to boost 1.70.0 for non-windows builds.
+* Update minimum version requirement of boost to 1.83.0 for non-windows builds.
 
 ### 0.8.30 (2025-05-07)
 
