@@ -46,6 +46,7 @@ public:
 		LivenessData() = default;
 		template<std::input_iterator Iter, std::sentinel_for<Iter> Sentinel>
 		LivenessData(Iter begin, Sentinel end): liveCounts(begin, end) {}
+		LivenessData(LiveCounts&& _liveCounts): liveCounts(std::move(_liveCounts)) {}
 
 		bool contains(SSACFG::ValueId const& _valueId) const;
 		Count count(SSACFG::ValueId const& _valueId) const;
